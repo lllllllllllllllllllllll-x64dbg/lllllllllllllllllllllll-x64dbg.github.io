@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <head>
 	<meta charset="UTF-8">
 	<title>Nyan Cat lul</title>
@@ -35,16 +36,23 @@
 		</div>
 	</div>
 
-	<a href="https://s3.amazonaws.com/images.seroundtable.com/google-animated-dreidel-1418819662.gif" target="_blank" title="click for info" class="repo">
+	<a href="future.png" target="_blank" title="click for info" class="repo">
 		<i class="iconify" data-icon="octicon:mention-16" data-inline="false"></i>
 		<span>info about us</span>
 	</a>
 
-	<audio autoplay="true" loop="true">
+	<audio id="lulz" autoplay="true" loop="true">
 		<source src="audio/nyan-cat.ogg" type="audio/ogg" />
 		<source src="audio/nyan-cat.mp3" type="audio/mpeg" />
 	</audio>
 
+	<script>
+		document.addEventListener('click', musicPlay);
+        function musicPlay() {
+            document.getElementById('lulz').play();
+            document.removeEventListener('click', musicPlay);
+        }
+	</script>
 	<script src="js/nyan.js"></script>
 </body>
 </html>

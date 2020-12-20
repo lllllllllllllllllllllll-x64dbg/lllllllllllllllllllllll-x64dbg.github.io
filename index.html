@@ -28,19 +28,14 @@
 	<div id="wave-b" class="hot rainbow"></div>
 	<div id="wave-b" class="cold rainbow"></div>
 
-	<div id="nyan-cat" class="frame1">
-		<div id="tail"></div>
 
-		<div id="paws"></div>
+    <div id="boi">
+    	<img id="sex" src="cats/original.gif"></img>
+    </div>
 
-		<div id="pop-tarts-body">
-			<div id="pop-tarts-body-cream"></div>
-		</div>
-
-		<div id="head">
-			<div id="face"></div>
-		</div>
-	</div>
+    <div id="m1nd">
+    	<img id="text" src="imgs/text.gif"></img>
+    </div>
 
 	<a href="future.png" target="_blank" title="click for info" class="repo">
 		<i class="iconify" data-icon="octicon:mention-16" data-inline="false"></i>
@@ -52,14 +47,73 @@
 		<source src="audio/nyan-cat.mp3" type="audio/mpeg" />
 	</audio>
 
+	<audio id="shhh" loop="true">
+		<source src="audio/dub.ogg" type="audio/ogg" />
+		<source src="audio/dub.mp3" type="audio/mpeg" />
+	</audio>
+
 	<script>
 		document.addEventListener('click', musicPlay);
 		var lol = document.getElementById('lulz');
-		lol.volume = 0.3;
+		var s3x = document.getElementById('shhh');
+		var easteregg = 0;
+		lol.volume = 0.5;
+
         function musicPlay() {
             lol.play();
             document.removeEventListener('click', musicPlay);
         }
+
+        var myPix = new Array("cats/nyaninja.gif", "cats/pirate.gif", "cats/jamaicnyan.gif", "cats/jazz.gif", "cats/gb.gif", "cats/mummy.gif", "cats/nyancoin.gif", "cats/original.gif", "cats/pumpkin.gif");
+
+        mom();
+        counter();
+        document.addEventListener('click', counter);
+        document.addEventListener('click', choosePic);
+
+        function mom() {
+        	randomNum = Math.floor(Math.random() * myPix.length);
+        }
+
+        function choosePic() {
+        	 mom();
+        	 ninjasex();
+             document.getElementById('sex').src = myPix[randomNum];
+        }
+
+        function ninjasex() {
+        	if (randomNum === 0) {
+        		document.getElementById("sex").style.padding = "415px 700px";
+        	} else if (randomNum === 6) {
+        		document.getElementById("sex").style.padding = "405px 873px";
+        	} else {
+        		document.getElementById("sex").style.padding = "415px 869px";
+        	}
+        }
+
+        function counter(){
+        	easteregg++;
+        	if (easteregg === 15) {
+        		lol.pause();
+        		s3x.play();
+        		document.removeEventListener('click', choosePic);
+        		document.getElementById("text").style.visibility = "visible";
+        		document.body.style.background= "#000000";
+        		$('.rainbow').css("visibility" , "hidden");
+        		document.getElementById('sex').src = "cats/dub.gif";
+        		console.log("Easter egg activated");
+            }
+        	if (easteregg === 20) {
+        		s3x.pause();
+        		lol.play();
+        		document.addEventListener('click', choosePic);
+        		$('.rainbow').css("visibility" , "visible");
+        		document.body.style.background= "#036";
+        		document.getElementById("text").style.visibility = "hidden";
+        		console.log("Easter egg deactivated");
+        	}
+        }
+
 	</script>
 	<script src="js/nyan.js"></script>
 </body>

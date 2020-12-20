@@ -23,9 +23,8 @@ body {
 
 #sex{
   position: absolute;
-  padding: 415px 869px;
-  top: 0;
-  right: 0;
+  top: 410px;
+  right: 790px;
   float:none;
   z-index: 5;
 }
@@ -71,22 +70,7 @@ body {
   width: auto;
   max-width: 200px;
 }
-.octicon {
-  font: normal normal 32px octicons;
-  line-height: 1;
-  display: inline-block;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
-}
-.octicon-mark-github:before {
-  content: '\f00a';
-}
+
 
 .sparks-combo {
   height: 300px;
